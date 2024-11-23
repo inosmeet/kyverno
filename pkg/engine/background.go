@@ -96,7 +96,7 @@ func (e *engine) filterRule(
 				return engineapi.RuleFail(rule.Name, ruleType, "", rule.ReportProperties)
 			}
 		}
-		logger.V(4).Info("rule not matched", "reason", err.Error())
+		logger.V(4).Info("old resource doesn't match", "reason", err.Error())
 		return nil
 	}
 
